@@ -1,0 +1,11 @@
+To start zookeeper
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+To start kafka
+bin/kafka-server-start.sh config/server.properties
+
+To create a topic
+bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092
+
+To see the message published on terminal
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic quickstart-events --from-beginning
